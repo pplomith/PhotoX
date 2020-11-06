@@ -31,7 +31,8 @@ Il team Photox si impegna nella progettazione e realizzazione di un programma we
 
 # Esempio: 
 
-1) Si individuano 5 categorie psicologiche: creativo, esecutivo, naturalista, scientifico, alternativo
+1) Si individuano 4 categorie psicologiche: leone, lontra, golden retrievers, castoro
+
 2) Dataset di immagini: 
     - immagini di quadri 
     - immagini di moto 
@@ -55,11 +56,10 @@ Il team Photox si impegna nella progettazione e realizzazione di un programma we
 4) Sottomissione dei questionari composti da domande e foto. Le foto per ciascun utente saranno mostrate in maniera proporzionalmente equa relativamente alle    categorie di appartenenza. Dato che sono state individuate 7 categorie avremo che ciascuna categoria contribuirà con il 14.28% delle fotografie mostrate 
 
 5) Gli utenti ai quali sarà sottoposto il questionario sono 200 di cui:   
-    - 30 creativi 
-    - 50 esecutivi 
-    - 25 naturalisti 
-    - 35 scientifici 
-    - 60 alternativi
+    - 30 leoni
+    - 50 lontre
+    - 75 golden retrievers
+    - 35 castori
 
 6) Per ciascuna categoria adesso si individua un pattern comune nella selezione delle immagini: 
     - creativi: 60% immagini di quadri, 20% immagini di cibo, 10% immagini di città, 10% immagini di auto
@@ -67,6 +67,7 @@ Il team Photox si impegna nella progettazione e realizzazione di un programma we
     - ... 
     - alternativi: 50% immagini di cibo, 30% immagini di città, 20% immagini di quadri 
     
-7) L'utente Emanuele Fittipaldi nel registrarsi risponde al questionario e ricade nella categoria "creativo" e quindi la matrice delle immagini darà formata      al 60% di immagini di quadri, 20% di immagini di cibo, 10% immagini di città, 10% immagini di auto
+7) L'utente Emanuele Fittipaldi nel registrarsi risponde al questionario e ricade nella categoria "golden retrievers" e quindi la matrice delle immagini sarà
+formata al 60% di immagini di quadri, 20% di immagini di cibo, 10% immagini di città, 10% immagini di auto
 
 
