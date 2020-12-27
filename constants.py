@@ -11,7 +11,6 @@ categorie = {0: ("Cane", "Gatto"), 1: ("Auto", "Moto"),
 # Ogni foto del questionario ha una label, e qui sostanzialmente abbiamo definito la label
 # quindi se per es. le foto sono nell'ordine Cane, Cane, Gatto, nel questionario
 # ci sarà nell'array la label "Cane", "Cane", "Gatto"
-
 sezione1 = ("Cane", "Gatto", "Cane", "Gatto", "Cane",
             "Gatto", "Cane", "Gatto", "Cane", "Gatto",
             "Cane", "Gatto", "Cane", "Gatto", "Cane",
