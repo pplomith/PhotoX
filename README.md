@@ -23,51 +23,51 @@ Il team Photox si impegna nella progettazione e realizzazione di un programma we
    1) Sottomissione di questionari a un determinato numero di persone (saranno probabilmente studenti e familiari). 
        I questionari saranno suddivisi in due parti: 
          - domande per stabilire la categoria psicologica del soggetto, 
-         - selezione di un determinato numero di foto da parte del soggetto. In questa fase nessuna categoria di foto sarà in maggioranza rispetto alle altre;            condivideranno tutte la stessa percentuale di foto di appartenenza  
+         - selezione di un determinato numero di foto da parte del soggetto. In questa fase il soggetto sceglierà foto da 4 sezioni. Le 4 sezioni individuate                sono veicoli (auto e moto), animali (cani e gatti), paesaggi (soleggiati e nuvolosi) e opere (sculture e quadri)
    
-   2) Per ciascuna categoria integrazione dei dati raccolti dai diversi utenti appartenenti a quella specifica categoria (questa fase è fondamentale per             capire i gusti preponderanti e non di ciascuna categoria psicologica)
+   2) Per ciascuna categoria integrazione dei dati raccolti dai diversi utenti appartenenti a quella specifica categoria (questa fase è fondamentale per             capire i gusti preponderanti e non, di ciascuna categoria psicologica)
 
-6)  L'utente che si iscriverà alla piattaforma risponderà alle medesime domande alle quali avranno risposto gli utenti profilati in fase di progettazione e in     base a quelle risposte verrà catalogato e gli verranno mostrate immagini appartenenti alle categorie e nelle proporzioni categoriali individuate per quel     profilo psicologico 
+6)  L'utente che si iscriverà alla piattaforma risponderà alle medesime domande alle quali avranno risposto gli utenti profilati e in base a quelle risposte verrà catalogato e gli verranno mostrate immagini appartenenti alle categorie e nelle proporzioni categoriali individuate per quel profilo psicologico.
 
 # Esempio: 
 
 1) Si individuano 4 categorie psicologiche: leone, lontra, golden retrievers, castoro
 
 2) Dataset di immagini: 
-    - immagini di quadri 
-    - immagini di moto 
-    - immagini di auto
-    - immagini di equazioni famose 
-    - immagini di città
-    - immagini di paesaggi naturali 
-    - immagini di cibo 
+    - dataset di quadri e sculture
+    - dataset di auto e moto
+    - dataset di cani e gatti 
+    - dataset di paesaggi nuvolosi e soleggiati
+    
+    Ogni dataset corrisponde a una sezione all'interno del questionario da un punto di vista di scelta di foto. 
  
-3) Ogni immagini di questi dataset corrisponderà a una categoria, denotate da un metadata che sarà una stringa: 
+3) Ogni immagine di questi dataset corrisponderà a una categoria, denotate da un metadata che sarà una stringa: 
     - immagini di quadri: metadato "quadro"
+    - immagini di sculture: metadato "scultura"
     - immagini di moto: metadato "moto"
-    - "" auto: "" "auto"
-    - "" equazioni famose: "" "equazione"
-    - "" città: "" "città"
-    - "" paesaggi naturali: "" "paesaggio"
-    - "" cibo: "" "cibo"
+    - immagini di auto: metadato "auto"
+    - immagini di cani: metadato "cane"
+    - immagini di gatto: metadato "gatto"
+    - immagini di paesaggi soleggiati: metadato "soleggiato"
+    - immagini di paesaggi nuvolosi: metadato "coperto"
     
   Come sempre l'estrazione del metadato categoriale avverà con reti neurali oppure con altri algoritmi, dipendentemente dalle condizioni esplicate in           precedenza nella sezione # Fasi del progetto e Algoritmo sezione 3. 
 
-4) Sottomissione dei questionari composti da domande e foto. Le foto per ciascun utente saranno mostrate in maniera proporzionalmente equa relativamente alle    categorie di appartenenza. Dato che sono state individuate 7 categorie avremo che ciascuna categoria contribuirà con il 14.28% delle fotografie mostrate 
+4) Sottomissione dei questionari composti da domande e foto. Le foto per ciascuna sezione saranno mostrate in maniera equilibrata. Ad esempio per la prima sezione (animali) ci saranno 10 foto di gatti e 10 foto di cani. 
 
-5) Gli utenti ai quali sarà sottoposto il questionario sono 200 di cui:   
+5) Gli utenti ai quali sarà sottoposto il questionario sono 100 di cui:   
     - 30 leoni
     - 50 lontre
     - 75 golden retrievers
     - 35 castori
 
 6) Per ciascuna categoria adesso si individua un pattern comune nella selezione delle immagini: 
-    - creativi: 60% immagini di quadri, 20% immagini di cibo, 10% immagini di città, 10% immagini di auto
-    - esecutivi: 70% immagini di equazioni famose, 5% immagini di moto, 15% immagini di auto
-    - ... 
-    - alternativi: 50% immagini di cibo, 30% immagini di città, 20% immagini di quadri 
+    - leoni: 60% immagini di quadri, 40% di sculture, 10% auto, 90% moto, 30% cani, 70% gatti, 20% soleggiato, 80% coperto
+    - lontre: 50% immagini di quadri, 50% di sculture, 10% auto, 90% moto, 30% cani, 70% gatti, 20% soleggiato, 80% coperto
+    - golden retriever: 60% immagini di quadri, 40% di sculture, 50% auto, 50% moto, 30% cani, 70% gatti, 40% soleggiato, 60% coperto
+    - castori: 40% immagini di quadri, 60% di sculture, 50% auto, 50% moto, 70% cani, 30% gatti, 40% soleggiato, 60% coperto
     
 7) L'utente Emanuele Fittipaldi nel registrarsi risponde al questionario e ricade nella categoria "golden retrievers" e quindi la matrice delle immagini sarà
-formata al 60% di immagini di quadri, 20% di immagini di cibo, 10% immagini di città, 10% immagini di auto
+formata per la categoria delle opere d'arte dal 60% di quadri e dal 40% di sculture 50% per moto e auto per la sezione veicoli, 30% cani e 70% gatti per la sezione animali e 40% soleggiato e 60% coperto per la sezione paesaggi. 
 
 
