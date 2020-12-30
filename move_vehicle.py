@@ -13,13 +13,9 @@ def prepare(path):
     return new_array.reshape(-1, img_size, img_size, 1)
 
 
-
-print("Spostamento delle immagini nellg giuste cartelle")
-
 path = "/Users/memex_99/Desktop/Veicoli/VeicoliSelezione"
 pathAuto = "/Users/memex_99/Desktop/Veicoli/VeicoliSelezione/AutoSelezione"
 pathMoto = "/Users/memex_99/Desktop/Veicoli/VeicoliSelezione/MotoSelezione"
-
 
 categorie = ["Auto", "Moto"]
 
@@ -29,4 +25,7 @@ for i, p in enumerate(photos):
         path_photo = os.path.join(path, p)
         prediction = model.predict([prepare(path_photo)])
 
-        print(i, categorie[int(round(prediction[0][0]))])
+        if categorie[int(round(prediction[0][0]))] == "Auto":
+            shutil.copy(path_photo, os.path.join(pathAuto, p))
+        else:
+            shutil.copy(path_photo, os.path.join(pathMoto, p))
